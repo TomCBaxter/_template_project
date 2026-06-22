@@ -1,15 +1,15 @@
 ```text
 .
-├── data/                 # raw and intermediate data
-├── notebooks/            # exploratory analysis and figure work
-│   └── SpecificFiguresAnalysis.ipynb
-├── proj/                 # project-facing notes and manuscript files
-│   ├── notes/
-│   └── tex/
+├── data/                 # Input/output data 
+├── notebooks/            # More notebooks can be added for scratch/experimentation
+│   └── SpecificFiguresAnalysis.ipynb # Keep exactly how FigGen/Analysis for paper
+├── proj/                 # Project specific writing
+│   ├── notes/            # Concepts specific to paper/Explorations (MARKDOWN)
+│   └── tex/              # TeX project
 │       ├── bib.bib
 │       └── main.tex
-├── scripts/              # reusable command-line helpers
-└── src/                  # reusable code
+├── scripts/              # Scripts (could probably go in core)
+└── src/                  # ...
 	├── analysis/
 	└── core/
 ```
