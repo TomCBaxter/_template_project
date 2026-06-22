@@ -1,0 +1,43 @@
+\documentclass[fleqn,usenatbib,onecolumn]{mnras}
+
+% --- Minimal Packages ---
+\usepackage{newtxtext,newtxmath}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+% --- Bibliography Fixes ---
+\DeclareRobustCommand{\VAN}[3]{#2}
+\let\VANthebibliography\thebibliography
+\def\thebibliography{\DeclareRobustCommand{\VAN}[3]{##3}\VANthebibliography}
+
+% --- Macros ---
+\newcommand{\Msun}{\,\mathrm{M}_{\odot}}
+\newcommand{\Rsun}{\,\mathrm{R}_{\odot}}
+\newcommand{\Lsun}{\,\mathrm{L}_{\odot}}
+\newcommand{\kms}{\,\mathrm{km\,s^{-1}}}
+\newcommand{\pc}{\,\mathrm{pc}}
+
+% --- Content ---
+\title{}
+
+% Leave date empty to prevent it appearing in the text body
+\date{}
+
+\begin{document}
+
+\maketitle
+
+% --- THE FIX ---
+\thispagestyle{empty} % Removes header/footer from the FIRST page
+\pagestyle{plain}     % Removes header/footer from SUBSEQUENT pages
+% ----------------
+
+\section{Dynamics}
+\citep{kaur_semianalytical_2024}
+
+% --- References ---
+\bibliographystyle{mnras}
+\bibliography{bib}
+
+\end{document}
